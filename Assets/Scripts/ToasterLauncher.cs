@@ -3,31 +3,19 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
 
-public class OnAnimationEnd : MonoBehaviour
+public class ToasterLauncher : MonoBehaviour
 {
-    public UnityEvent unityEvent;
-    [Space(10)]
-    public UnityEvent TriggerEnter;
-    [Space(10)]
-    public UnityEvent CollisionExit;
-    [Space(10)]
-
+    [Header("Public Components")]
     public GameObject ThePlayer;
     public Animation ToastAnim;
 
     private Rigidbody playerRb;
-
-    [Space(20)]
-
+    [Space(5)]
+    [Header("Toaster Settings")]
+    [Tooltip("How long the toaster cant be used again")]
     public float toasterCooldown = 0.5f;
-    [Space(20)]
 
-    [Tooltip("On what frame the player should be launched")]
-    public int FlyFrame;
-    int FramesPassed;
-
-    [Space(20)]
-    private float WaitReset = 0f;
+    float WaitReset = 0f;
     bool GoingShoot = false;
     bool DidShoot = false;
 
