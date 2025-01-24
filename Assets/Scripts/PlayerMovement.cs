@@ -172,8 +172,8 @@ public class PlayerMovement : MonoBehaviour
     //Simple ground check
     void CheckGrounded()
     {
-        isGrounded = Physics.Raycast(transform.position, -transform.up, 1.1f);
-        Debug.DrawRay(transform.position, -transform.up, Color.magenta, 1.1f);
+        isGrounded = Physics.Raycast(transform.position, -transform.up, 0.1f);
+        Debug.DrawRay(transform.position, -transform.up, Color.magenta, 0.1f);
         slideScript.AirSlided = false;
     }
 }
