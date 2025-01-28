@@ -117,6 +117,7 @@ public class PlayerMovement : MonoBehaviour
                 
                 //Moves the player
                 Vector3 targetPosition = rb.position + CameraRelative * moveSpeed * itemManager.MayoSpeedMult * Time.fixedDeltaTime;
+
                 rb.MovePosition(targetPosition);
             }
         }
@@ -155,6 +156,7 @@ public class PlayerMovement : MonoBehaviour
         Vector3 movementDirection = (cameraForward * moveZ + cameraRight * moveX).normalized;
         
         transform.Translate(movementDirection * moveSpeed * Time.deltaTime, Space.World);
+        
     }
 
     //Simple jump script
