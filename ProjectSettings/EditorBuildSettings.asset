@@ -11,4 +11,28 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/TESTCreditsScene.unity
     guid: cdc71ba3e8a5f784c997346bfeaa3aa1
+  - enabled: 1
+    path: Assets/Scenes/Start.unity
+    guid: 00d59852ea20f9543aa42a80379b1438
+  - enabled: 1
+    path: Assets/Scenes/BigAssetScene.unity
+    guid: 5feadcd64c7376849a2e64c0ddeb7ef4
+  - enabled: 1
+    path: Assets/Scenes/CreditsScene.unity
+    guid: 1690752a9adc25c42974267143e94ed8
+  - enabled: 1
+    path: Assets/Scenes/FinalScene.unity
+    guid: c637b994b0a5567419f7e449c36c804c
+  - enabled: 1
+    path: Assets/Scenes/MainMenuScene.unity
+    guid: f76a160eac889584ea3c8f58f90dfe0e
+  - enabled: 1
+    path: Assets/Scenes/MovementScene.unity
+    guid: 57814f9a8d7ac334abcd11d6456b9302
+  - enabled: 1
+    path: Assets/Scenes/SmallAssetScene.unity
+    guid: 601fcc0dc3320ba4c86271e2f48a857d
+  - enabled: 1
+    path: Assets/Scenes/UiDesignScene.unity
+    guid: fd4fb7b163d41cd439f95d527d41ef9b
   m_configObjects: {}
