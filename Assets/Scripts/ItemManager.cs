@@ -78,6 +78,7 @@ public class ItemManager : MonoBehaviour
     
     void Update()
     {
+        
         if (Itemcount < 6)
         {
 
