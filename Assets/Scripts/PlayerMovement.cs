@@ -38,6 +38,7 @@ public class PlayerMovement : MonoBehaviour
     float xInput;
     //Input on the z axis
     float zInput;
+    public float SizeRaycast = 1.1f;
 
     //True if touching the ground
     bool isGrounded;
@@ -120,9 +121,8 @@ public class PlayerMovement : MonoBehaviour
                 transform.rotation = Quaternion.Slerp(transform.rotation, GoingRotate, Time.deltaTime * rotationSpeed);
                 
                 //Moves the player
-                Vector3 targetPosition = rb.position + CameraRelative * moveSpeed * itemManager.MayoSpeedMult * Time.fixedDeltaTime;
 
-                rb.MovePosition(targetPosition);
+                rb.velocity = new Vector3(CameraRelative.x * moveSpeed * itemManager.MayoSpeedMult, rb.velocity.y, CameraRelative.z * moveSpeed * itemManager.MayoSpeedMult);
             }
         }
     }
@@ -166,12 +166,20 @@ public class PlayerMovement : MonoBehaviour
     //Simple jump script
     void DoJump()
     {
-        
+        Debug.DrawRay(transform.position, transform.forward, Color.red, 0.5f);
+        bool isBlockedByWall = Physics.Raycast(transform.position, transform.forward, 0.5f);
+        Debug.Log(isBlockedByWall);
         if (Input.GetKeyDown(KeyCode.Space) && isGrounded)
         {
-            Debug.Log("JUMPING!!!");
-            rb.AddForce(0, JumpPower * itemManager.JumpIncrease * 100, 0);
-            onJump.Invoke();
+            if (isBlockedByWall) // If near a wall, jump straight up
+            {
+                rb.position -= CameraRelative.normalized * 0.1f;
+                rb.velocity = new Vector3(0, JumpPower * itemManager.JumpIncrease, 0);
+            }
+            else // Normal jump with movement
+            {
+                rb.velocity = new Vector3(rb.velocity.x, JumpPower * itemManager.JumpIncrease, rb.velocity.z);
+            }
         }
 
     }
@@ -179,8 +187,8 @@ public class PlayerMovement : MonoBehaviour
     //Simple ground check
     void CheckGrounded()
     {
-        isGrounded = Physics.Raycast(transform.position, -transform.up, 0.1f);
-        Debug.DrawRay(transform.position, -transform.up, Color.magenta, 0.1f);
+        isGrounded = Physics.Raycast(transform.position, -transform.up, SizeRaycast);
+        Debug.DrawRay(transform.position, -transform.up, Color.magenta, SizeRaycast);
         slideScript.AirSlided = false;
     }
 }
