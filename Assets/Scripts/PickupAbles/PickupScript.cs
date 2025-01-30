@@ -22,10 +22,11 @@ public class PickupScript : MonoBehaviour
 
 
     MeshRenderer meshRen;
+    MeshRenderer childMeshRen;
 
     void Start()
     {
-
+        childMeshRen = childGameObject.GetComponent<MeshRenderer>();
         meshRen = GetComponent<MeshRenderer>();
     }
     private void Update()
@@ -53,7 +54,7 @@ public class PickupScript : MonoBehaviour
             if (isEquipped == true && itemManager.Itemcount < 7)
             {
                 itemManager.Mayo = true;
-                childGameObject.SetActive(false);
+                childMeshRen.enabled = false;
                 meshRen.enabled = true;
                 Debug.Log("Mayo is true");
                 itemManager.Itemcount++;
@@ -62,7 +63,7 @@ public class PickupScript : MonoBehaviour
             if (isEquipped == false)
             {
                 itemManager.Mayo = false;
-                childGameObject.SetActive(true);
+                childMeshRen.enabled = true;
                 meshRen.enabled = false;
                 Debug.Log("Mayo is false");
                 itemManager.Itemcount--;
@@ -76,7 +77,7 @@ public class PickupScript : MonoBehaviour
             if (isEquipped == true && itemManager.Itemcount < 7)
             {
                 itemManager.Chocolate = true;
-                childGameObject.SetActive(false);
+                childMeshRen.enabled = false;
                 meshRen.enabled = true;
                 Debug.Log("Chocolate is true");
                 itemManager.Itemcount++;
@@ -85,7 +86,7 @@ public class PickupScript : MonoBehaviour
             if (isEquipped == false)
             {
                 itemManager.Chocolate = false;
-                childGameObject.SetActive(true);
+                childMeshRen.enabled = true;
                 meshRen.enabled = false;
                 Debug.Log("Chocolate is false");
                 itemManager.Itemcount--;
@@ -99,7 +100,7 @@ public class PickupScript : MonoBehaviour
             if (isEquipped == true && itemManager.Itemcount < 7)
             {
                 itemManager.Cheese = true;
-                childGameObject.SetActive(false);
+                childMeshRen.enabled = false;
                 meshRen.enabled = true;
                 Debug.Log("Cheese is true");
                 itemManager.Itemcount++;
@@ -108,7 +109,7 @@ public class PickupScript : MonoBehaviour
             if (isEquipped == false)
             {
                 itemManager.Cheese = false;
-                childGameObject.SetActive(true);
+                childMeshRen.enabled = true;
                 meshRen.enabled = false;
                 Debug.Log("Cheese is false");
                 itemManager.Itemcount--;
@@ -121,7 +122,7 @@ public class PickupScript : MonoBehaviour
             if (isEquipped == true && itemManager.Itemcount < 7)
             {
                 itemManager.Strawberry = true;
-                childGameObject.SetActive(false);
+                childMeshRen.enabled = false;
                 meshRen.enabled = true;
                 Debug.Log("Strawberry is true");
                 itemManager.Itemcount++;
@@ -130,7 +131,7 @@ public class PickupScript : MonoBehaviour
             if (isEquipped == false)
             {
                 itemManager.Strawberry = false;
-                childGameObject.SetActive(true);
+                childMeshRen.enabled = true;
                 meshRen.enabled = false;
                 Debug.Log("Strawberry is false");
                 itemManager.Itemcount--;
@@ -143,7 +144,7 @@ public class PickupScript : MonoBehaviour
             if (isEquipped == true && itemManager.Itemcount < 7)
             {
                 itemManager.Lettuce = true;
-                childGameObject.SetActive(false);
+                childMeshRen.enabled = false;
                 meshRen.enabled = true;
                 Debug.Log("Lettuce is true");
                 itemManager.Itemcount++;
@@ -152,7 +153,8 @@ public class PickupScript : MonoBehaviour
             if (isEquipped == false)
             {
                 itemManager.Lettuce = false;
-                childGameObject.SetActive(true);
+                childMeshRen.enabled = true;
+                meshRen.enabled = false;
                 Debug.Log("Lettuce is false");
                 itemManager.Itemcount--;
                 itemManager.GoodItems--;
@@ -164,7 +166,7 @@ public class PickupScript : MonoBehaviour
             if (isEquipped == true && itemManager.Itemcount < 7)
             {
                 itemManager.Cookies = true;
-                childGameObject.SetActive(false);
+                childMeshRen.enabled = false;
                 meshRen.enabled = true;
                 Debug.Log("Cookies is true");
                 itemManager.Itemcount++;
@@ -173,7 +175,8 @@ public class PickupScript : MonoBehaviour
             if (isEquipped == false)
             {
                 itemManager.Cookies = false;
-                childGameObject.SetActive(true);
+                childMeshRen.enabled = true;
+                meshRen.enabled = false;
                 Debug.Log("Cookies is false");
                 itemManager.Itemcount--;
                 itemManager.BadItems--;
@@ -185,7 +188,7 @@ public class PickupScript : MonoBehaviour
             if (isEquipped == true && itemManager.Itemcount < 7)
             {
                 itemManager.Eggs = true;
-                childGameObject.SetActive(false);
+                childMeshRen.enabled = false;
                 meshRen.enabled = true;
                 Debug.Log("Egg is true");
                 itemManager.Itemcount++;
@@ -194,7 +197,8 @@ public class PickupScript : MonoBehaviour
             if (isEquipped == false)
             {
                 itemManager.Eggs = false;
-                childGameObject.SetActive(true);
+                childMeshRen.enabled = true;
+                meshRen.enabled = false;
                 Debug.Log("Egg is false");
                 itemManager.Itemcount--;
                 itemManager.GoodItems--;
@@ -207,7 +211,7 @@ public class PickupScript : MonoBehaviour
             if (isEquipped == true && itemManager.Itemcount < 7)
             {
                 itemManager.Chicken = true;
-                childGameObject.SetActive(false);
+                childMeshRen.enabled = false;
                 meshRen.enabled = true;
                 Debug.Log("Chicken is true");
                 itemManager.Itemcount++;
@@ -216,7 +220,7 @@ public class PickupScript : MonoBehaviour
             if (isEquipped == false)
             {
                 itemManager.Chicken = false;
-                childGameObject.SetActive(true);
+                childMeshRen.enabled = true;
                 Debug.Log("Chicken is false");
                 itemManager.Itemcount--;
                 itemManager.BadItems--;
@@ -231,7 +235,7 @@ public class PickupScript : MonoBehaviour
             if (isEquipped == true && itemManager.Itemcount < 7)
             {
                 itemManager.Bacon = true;
-                childGameObject.SetActive(false);
+                childMeshRen.enabled = false;
                 meshRen.enabled = true;
                 Debug.Log("Bacon is true");
                 itemManager.Itemcount++;
@@ -240,7 +244,8 @@ public class PickupScript : MonoBehaviour
             if (isEquipped == false)
             {
                 itemManager.Bacon = false;
-                childGameObject.SetActive(true);
+                childMeshRen.enabled = true;
+                meshRen.enabled = false;
                 Debug.Log("Bacon is false");
                 itemManager.Itemcount--;
                 itemManager.GoodItems--;
@@ -252,7 +257,7 @@ public class PickupScript : MonoBehaviour
             if (isEquipped == true && itemManager.Itemcount < 7)
             {
                 itemManager.Peppers = true;
-                childGameObject.SetActive(false);
+                childMeshRen.enabled = false;
                 meshRen.enabled = true;
                 Debug.Log("Peppers is true");
                 itemManager.Itemcount++;
@@ -260,8 +265,9 @@ public class PickupScript : MonoBehaviour
             }
             if (isEquipped == false)
             {
-                itemManager.Bacon = false;
-                childGameObject.SetActive(true);
+                itemManager.Peppers = false;
+                childMeshRen.enabled = true;
+                meshRen.enabled = false;
                 Debug.Log("Peppers is false");
                 itemManager.Itemcount--;
                 itemManager.BadItems--;
@@ -275,7 +281,7 @@ public class PickupScript : MonoBehaviour
             if (isEquipped == true && itemManager.Itemcount < 7)
             {
                 itemManager.HotSauce = true;
-                childGameObject.SetActive(false);
+                childMeshRen.enabled = false;
                 meshRen.enabled = true;
                 Debug.Log("Hotsauce is true");
                 itemManager.Itemcount++;
@@ -285,7 +291,8 @@ public class PickupScript : MonoBehaviour
             {
                 itemManager.HotSauce = false;
                 Debug.Log("Hotsauce is false");
-                childGameObject.SetActive(true);
+                childMeshRen.enabled = true;
+                meshRen.enabled = false;
                 itemManager.Itemcount--;
                 itemManager.GoodItems--;
             }
@@ -296,7 +303,7 @@ public class PickupScript : MonoBehaviour
             if (isEquipped == true && itemManager.Itemcount < 7)
             {
                 itemManager.MoreBread = true;
-                childGameObject.SetActive(false);
+                childMeshRen.enabled = false;
                 meshRen.enabled = true;
                 Debug.Log("Bread is true");
                 itemManager.Itemcount++;
@@ -306,7 +313,8 @@ public class PickupScript : MonoBehaviour
             {
                 itemManager.MoreBread = false;
                 Debug.Log("Bread is false");
-                childGameObject.SetActive(true);
+                childMeshRen.enabled = true;
+                meshRen.enabled = false;
                 itemManager.Itemcount--;
                 itemManager.BadItems--;
             }
