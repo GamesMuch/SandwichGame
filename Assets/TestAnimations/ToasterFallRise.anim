@@ -202,8 +202,23 @@ AnimationClip:
   m_HasGenericRootTransform: 1
   m_HasMotionFloatCurves: 0
   m_Events:
+  - time: 1
+    functionName: InvokeOnEvent
+    data: Audio Play
+    objectReferenceParameter: {fileID: 8300000, guid: dd768204fc75b6c45ba68aaa474870e8,
+      type: 3}
+    floatParameter: 0
+    intParameter: 0
+    messageOptions: 0
   - time: 1.1666666
     functionName: ShootPlayer
+    data: 
+    objectReferenceParameter: {fileID: 0}
+    floatParameter: 0
+    intParameter: 0
+    messageOptions: 0
+  - time: 1.1666666
+    functionName: 
     data: 
     objectReferenceParameter: {fileID: 0}
     floatParameter: 0

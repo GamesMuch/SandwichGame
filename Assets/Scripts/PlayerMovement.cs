@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Xml.Xsl;
 using UnityEngine;
+using UnityEngine.Events;
 using UnityEngine.EventSystems;
 using UnityEngine.InputSystem.XR;
 using UnityEngine.UIElements;
@@ -16,7 +17,10 @@ public class PlayerMovement : MonoBehaviour
     public Transform ExtraCamLocation;
     [Tooltip("The ItemManager")]
     public ItemManager itemManager;
-
+    [Tooltip("A sound file")]
+    public AudioClip jumpAudio;
+    [Space(10)]
+    public UnityEvent onJump;
     [Space(10)]
 
     [Header("Movement Settings")]
@@ -167,6 +171,7 @@ public class PlayerMovement : MonoBehaviour
         {
             Debug.Log("JUMPING!!!");
             rb.AddForce(0, JumpPower * itemManager.JumpIncrease * 100, 0);
+            onJump.Invoke();
         }
 
     }
