@@ -22,7 +22,7 @@ public class CheckIfWork : MonoBehaviour
         if (collider.gameObject.tag == "Player" && itemManager.Itemcount == 6 && Input.GetKeyDown(KeyCode.E))
         {
             Debug.Log("Shmenis");
-            SceneManager.LoadScene(1);
+            SceneManager.LoadScene(3);
         }
     }
 }

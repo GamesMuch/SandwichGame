@@ -9,11 +9,14 @@ EditorBuildSettings:
     path: Assets/Scenes/Start.unity
     guid: 00d59852ea20f9543aa42a80379b1438
   - enabled: 1
-    path: Assets/Scenes/GrayBoxMap.unity
-    guid: 99c9720ab356a0642a771bea13969a05
+    path: Assets/Scenes/FinalScene.unity
+    guid: c637b994b0a5567419f7e449c36c804c
   - enabled: 1
     path: Assets/Scenes/TESTCreditsScene.unity
     guid: cdc71ba3e8a5f784c997346bfeaa3aa1
+  - enabled: 1
+    path: Assets/Scenes/GrayBoxMap.unity
+    guid: 99c9720ab356a0642a771bea13969a05
   - enabled: 1
     path: Assets/Scenes/Start.unity
     guid: 00d59852ea20f9543aa42a80379b1438
@@ -23,9 +26,6 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/CreditsScene.unity
     guid: 1690752a9adc25c42974267143e94ed8
-  - enabled: 1
-    path: Assets/Scenes/FinalScene.unity
-    guid: c637b994b0a5567419f7e449c36c804c
   - enabled: 1
     path: Assets/Scenes/MainMenuScene.unity
     guid: f76a160eac889584ea3c8f58f90dfe0e
