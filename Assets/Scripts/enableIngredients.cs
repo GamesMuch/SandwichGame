@@ -8,7 +8,6 @@ public class enableIngredients : MonoBehaviour
     public GameObject goodIngredient;
     public GameObject badIngredient;
 
-    public ItemManager iM;
 
     bool GoodActive;
     bool BadActive;
@@ -23,114 +22,114 @@ public class enableIngredients : MonoBehaviour
     {
         if (gameObject.name == "Spot1")
         {
-            if (iM.Mayo == true)
+            if (ItemManager.Instance.Mayo == true)
             {
                 goodIngredient.SetActive(true);
             }
-            if (iM.Mayo == false)
+            if (ItemManager.Instance.Mayo == false)
             {
                 goodIngredient.SetActive(false);
             }
-            if (iM.Chocolate == true)
+            if (ItemManager.Instance.Chocolate == true)
             {
                 badIngredient.SetActive(true);
             }
-            if (iM.Chocolate == false)
+            if (ItemManager.Instance.Chocolate == false)
             {
                 badIngredient.SetActive(false);
             }
         }
         if (gameObject.name == "Spot2")
         {
-            if (iM.Lettuce == true)
+            if (ItemManager.Instance.Lettuce == true)
             {
                 goodIngredient.SetActive(true);
             }
-            if (iM.Lettuce == false)
+            if (ItemManager.Instance.Lettuce == false)
             {
                 goodIngredient.SetActive(false);
             }
-            if (iM.Cookies == true)
+            if (ItemManager.Instance.Cookies == true)
             {
                 badIngredient.SetActive(true);
             }
-            if (iM.Cookies == false)
+            if (ItemManager.Instance.Cookies == false)
             {
                 badIngredient.SetActive(false);
             }
         }
         if (gameObject.name == "Spot3")
         {
-            if (iM.Cheese == true)
+            if (ItemManager.Instance.Cheese == true)
             {
                 goodIngredient.SetActive(true);
             }
-            if (iM.Cheese == false)
+            if (ItemManager.Instance.Cheese == false)
             {
                 goodIngredient.SetActive(false);
             }
-            if (iM.Strawberry == true)
+            if (ItemManager.Instance.Strawberry == true)
             {
                 badIngredient.SetActive(true);
             }
-            if (iM.Strawberry == false)
+            if (ItemManager.Instance.Strawberry == false)
             {
                 badIngredient.SetActive(false);
             }
         }
         if (gameObject.name == "Spot4")
         {
-            if (iM.Eggs == true)
+            if (ItemManager.Instance.Eggs == true)
             {
                 goodIngredient.SetActive(true);
             }
-            if (iM.Eggs == false)
+            if (ItemManager.Instance.Eggs == false)
             {
                 goodIngredient.SetActive(false);
             }
-            if (iM.Chicken == true)
+            if (ItemManager.Instance.Chicken == true)
             {
                 badIngredient.SetActive(true);
             }
-            if (iM.Chicken == false)
+            if (ItemManager.Instance.Chicken == false)
             {
                 badIngredient.SetActive(false);
             }
         }
         if (gameObject.name == "Spot5")
         {
-            if (iM.HotSauce == true)
+            if (ItemManager.Instance.HotSauce == true)
             {
                 goodIngredient.SetActive(true);
             }
-            if (iM.HotSauce == false)
+            if (ItemManager.Instance.HotSauce == false)
             {
                 goodIngredient.SetActive(false);
             }
-            if (iM.MoreBread == true)
+            if (ItemManager.Instance.MoreBread == true)
             {
                 badIngredient.SetActive(true);
             }
-            if (iM.MoreBread == false)
+            if (ItemManager.Instance.MoreBread == false)
             {
                 badIngredient.SetActive(false);
             }
         }
         if (gameObject.name == "Spot6")
         {
-            if (iM.Bacon == true)
+            if (ItemManager.Instance.Bacon == true)
             {
                 goodIngredient.SetActive(true);
             }
-            if (iM.Bacon == false)
+            if (ItemManager.Instance.Bacon == false)
             {
                 goodIngredient.SetActive(false);
             }
-            if (iM.Peppers == true)
+            if (ItemManager.Instance.Peppers == true)
             {
                 badIngredient.SetActive(true);
             }
-            if (iM.Peppers == false)
+            if (ItemManager.Instance.Peppers == false)
             {
                 badIngredient.SetActive(false);
             }
