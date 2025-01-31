@@ -23,6 +23,7 @@ public class PickupScript : MonoBehaviour
     MeshRenderer meshRen;
     MeshRenderer childMeshRen;
 
+    public GameObject toolTip;
     void Start()
     {
         childMeshRen = childGameObject.GetComponent<MeshRenderer>();
@@ -43,6 +44,14 @@ public class PickupScript : MonoBehaviour
             flipTrue();
         }
 
+    }
+    private void OnTriggerEnter(Collider other)
+    {
+        toolTip.SetActive(true);
+    }
+    private void OnTriggerExit(Collider other)
+    {
+        toolTip.SetActive(false);
     }
     void flipTrue()
     {
