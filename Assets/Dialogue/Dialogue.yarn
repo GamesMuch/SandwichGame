@@ -1,30 +1,32 @@
 ﻿title: Start
 ---
 	You: What the-
-	Sandwitch: YOU
-	You: Me?
-	Sandwitch: WHAT DID YOU DO TO ME
-	Sandwitch: YOU’VE MADE ME THE WORST SANDWICH TO EVER EXIST
-	Sandwitch: YOU HORRIBLE PERSON
-	You: Okay rude…
-	Sandwitch: I will make you pay for this
+	Sandwitch: In the name of the holy sandwich!
+	Sandwitch: WHAT is that?!
+	You: That is my perfect sandwich.
+	Sandwitch: It most certainly is not!
+	Sandwitch: You shall be cursed to become a sandwich,
+	Sandwitch: to improve your sandwich making skills.
+	Sandwitch: ...or be doomed to live the life as your own creation forever!
 
-	You: What- WHAT ARE YOU DOING
+	You: What- WHAT ARE YOU DOING?!
 
-	Sandwitch: You will know how it feels to be a sandwich
-	Sandwitch: If you create a good sandwich, I will turn you back into a human
-	Sandwitch: I’ll be waiting here when you’re ready
-    Sandwitch: You better not disappoint me
+	Sandwitch: You will know how it feels to be a sandwich...
+	Sandwitch: If you create a good sandwich, I will turn you back into a human.
+	Sandwitch: I’ll be waiting here when you’re ready.
+    Sandwitch: You better not disappoint me...
 ===
 
 title: GoodEnd
 ---
+<<wait 5>>
 	Sandwitch: Wow, I’m impressed… This is a GREAT sandwich
 	Sandwitch: I will turn you back human, I hope you learned from your mistake
 ===
 
 title: NeutralEnd
 ---
+<<wait 5>>
 	Sandwitch: This is a decent sandwich
 	Sandwitch: I mean, it could be better, but this is fine
 	Sandwitch: I’ll turn you back to a human
@@ -33,6 +35,7 @@ title: NeutralEnd
 
 title: BadEnd
 ---
+<<wait 5>>
 	Sandwitch: Wow…
 	Sandwitch: How did you make an even worse one
 	Sandwitch: This is horrible
