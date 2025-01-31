@@ -166,20 +166,9 @@ public class PlayerMovement : MonoBehaviour
     //Simple jump script
     void DoJump()
     {
-        Debug.DrawRay(transform.position, transform.forward, Color.red, 0.5f);
-        bool isBlockedByWall = Physics.Raycast(transform.position, transform.forward, 0.5f);
-        Debug.Log(isBlockedByWall);
         if (Input.GetKeyDown(KeyCode.Space) && isGrounded)
         {
-            if (isBlockedByWall) // If near a wall, jump straight up
-            {
-                rb.position -= CameraRelative.normalized * 0.1f;
-                rb.velocity = new Vector3(0, JumpPower * itemManager.JumpIncrease, 0);
-            }
-            else // Normal jump with movement
-            {
-                rb.velocity = new Vector3(rb.velocity.x, JumpPower * itemManager.JumpIncrease, rb.velocity.z);
-            }
+            rb.AddForce(0, JumpPower, 0, ForceMode.Impulse);
         }
 
     }
